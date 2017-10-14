@@ -1,0 +1,33 @@
+AC_PREREQ([2.67])
+AC_INIT([tidm_exception], [7.0], [oi@tidm.ir])
+AM_PROG_AR
+LT_INIT
+LT_LANG([C++])
+AC_LANG([C++])
+AX_CXX_COMPILE_STDCXX_11([noext], [mandatory])
+
+AM_INIT_AUTOMAKE
+AM_SILENT_RULES([yes])
+AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_HEADERS([config.h])
+
+AC_PROG_CXX
+AC_PROG_AWK
+AC_PROG_CC
+AC_PROG_CPP
+AC_PROG_INSTALL
+AC_PROG_LN_S
+AC_PROG_MAKE_SET
+AC_PROG_LIBTOOL
+
+AC_C_INLINE
+
+AC_CONFIG_FILES([Makefile
+                src/Makefile
+                test/Makefile
+                tidm_exception.pc])
+
+AC_SUBST([TIDM_EXCEPTION_SO_VERSION], [7:0:0])
+AC_SUBST([TIDM_EXCEPTION_API_VERSION], [7.0.0])
+
+AC_OUTPUT
